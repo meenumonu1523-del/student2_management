@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Update Student</h1>
+
+<form method="POST" class="student-form">
+
+    <label>Student Name</label>
+    <input type="text" name="name"
+           value="{{ student.name }}" required>
+
+    <label>Age</label>
+    <input type="number" name="age"
+           value="{{ student.age }}" required>
+
+    <label>Course</label>
+    <input type="text" name="course"
+           value="{{ student.course }}" required>
+
+    <label>Email</label>
+    <input type="email" name="email"
+           value="{{ student.email }}" required>
+
+    <label>Marks</label>
+    <input type="number" name="marks"
+           value="{{ student.marks }}"
+           min="0" max="100" step="0.01" required>
+
+    <button type="submit">Update Student</button>
+
+</form>
+
+<a href="/">Back to Dashboard</a>
+
+{% endblock %}

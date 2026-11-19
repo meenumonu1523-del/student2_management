@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Add New Student</h1>
+
+<form method="POST" class="student-form">
+
+    <label>Student Name</label>
+    <input type="text" name="name" required>
+
+    <label>Age</label>
+    <input type="number" name="age" min="1" required>
+
+    <label>Course</label>
+    <input type="text" name="course" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Marks</label>
+    <input type="number" name="marks"
+           min="0" max="100" step="0.01" required>
+
+    <button type="submit">Save Student</button>
+
+</form>
+
+<a href="/">Back to Dashboard</a>
+
+{% endblock %}
